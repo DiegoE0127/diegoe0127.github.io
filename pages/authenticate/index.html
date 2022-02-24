@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- <link rel="stylesheet" href="../style.css"> -->
+  <link rel="icon" href="/icons/favicon-3.png" type="image/png">
+  <title>MySQL/PHP Practice | Register</title>
+</head>
+<body>
+
+<div class="navbar">
+  <a href="../home" class="navbutton home">Home</a>
+</div>
+
+<div class="border">
+  <div class="container">
+    <h1>Register</h1>
+    <p>A code has been sent to .</p>
+    <hr>
+<!--     
+    <?php
+        if(array_key_exists('username', $_POST)) {
+            button1();
+        }
+        function button1() {
+          $arr = $_SERVER['REQUEST_URI'];
+          echo $arr;
+        }
+    ?> -->
+
+    <!-- TODO: Reroute action files -->
+    <form method="post" action="../../php/authenticate.php">
+      <label for="username"><b>Code</b></label>
+      <input type="username" value="" placeholder="Enter 6 Digit Code" name="authcode" id="authcode" required>
+      <button id="submit" type="submit" name="submit" class="submit">Submit</button>
+      <h1 id="text"></h1>
+    </form>
+  </div>
+</div>
+
+<!-- <script>
+document.getElementById("submit").addEventListener("click", code);
+
+var input = document.getElementById("authcode");
+function code() {
+  console.log(document.getElementById("authcode"));
+}
+
+console.log(code);
+
+</script> -->
+
+</body>
+</html>

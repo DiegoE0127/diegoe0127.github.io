@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" href="/icons/favicon-3.png" type="image/png">
+  <title>MySQL/PHP Practice | Sign in</title>
+</head>
+</style>
+<body>
+
+<!-- <script src="signin.js"></script> -->
+
+<div class="navbar">
+  <a href="../home" class="navbutton home">Home</a>
+</div>
+
+</br>
+</br>
+
+<div class="border">
+  <div class="container">
+    <h1>Sign in</h1>
+    <p>Please fill in this form to sign in.</p>
+    <hr>
+
+    <form id="signin" method="post" action="../../php/signin.php">
+      <label for="email"><b>Email</b></label>
+      <input type="email" placeholder="Enter Email" name="user_email" id="user_email" required>
+
+      <label for="password"><b>Password</b></label>
+      <input type="password" value="" placeholder="Enter Password" id="password" class="password" name="user_pswd" required>
+      <input type="checkbox" id="togglePassword">Show Password
+
+      <button type="submit" class="registerbtn">Sign In</button>
+    </form>
+
+    <script>
+    const togglePassword = document.querySelector("#togglePassword");
+    const password = document.querySelector("#password");
+
+    togglePassword.addEventListener("click", function () {
+    	// toggle the type attribute
+    	const type = password.getAttribute("type") === "password" ? "text" : "password";
+    	password.setAttribute("type", type);
+    });
+    </script>
+
+  </div>
+
+  <div class="container signinexisting">
+    <p>Don't have an account yet? <a href="../register">Register</a>.</p>
+  </div>
+</div>
+
+
+</body>
+</html>
